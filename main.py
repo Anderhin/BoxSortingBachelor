@@ -5,4 +5,12 @@
 import cv2 #imports opencv module for python
 import numpy #imports munpy module for python
 
-print('hello')
+
+imgPath = r'C:\Users\Ander\OneDrive\Dokumenter\BoxSortingPictures\BadExample.jpg'
+boxesExample = cv2.imread(imgPath,1)
+boxesExampleResize = cv2.resize(boxesExample, (1280,720))
+cv2.imshow('image',boxesExampleResize)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+print('Beep Boop')
