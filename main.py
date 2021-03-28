@@ -3,12 +3,16 @@
 #Code by Anders Indrelid
 #
 import cv2 #imports opencv module for python
-import numpy #imports munpy module for python
+import numpy as np #imports munpy module for python
 
 
-imgPath = r'C:\Users\Ander\OneDrive\Dokumenter\BoxSortingPictures\BadExample.jpg'
-boxesExample = cv2.imread(imgPath,1)
-#boxesExampleResize = cv2.resize(boxesExample, (1280,720))
-cv2.imshow('image',boxesExample)
+imgPath = r'C:\Users\Ander\OneDrive\Dokumenter\Python\BoxDetection\BoxSortingBachelor\BoxSortingPictures\BlueBoxFront_Color.png'
+image = cv2.imread(imgPath)
+
+window_name = 'image'
+image = image[200:650, 250:900]
+
+cv2.imshow(window_name, image)
+
 cv2.waitKey(0)
-cv2.destroyAllWindows()
+cv2.destroyAllWindows(q)
