@@ -50,7 +50,7 @@ for pic, contour in enumerate(contours):
     area = cv2.contourArea(contour)
     if(area > 2500):
         x, y, w, h = cv2.boundingRect(contour)
-        image = cv2.rectangle(image, (x,y), (x + w, y + h), (0,0,255), 2)
+        image = cv2.rectangle(image, (x,y), (x + w, y + h), (0,0,255), 1)
         cv2.putText(image, "Red plasticpallet", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,255))
         redPallets += 1
 
@@ -61,7 +61,7 @@ for pic, contour in enumerate(contours):
     area = cv2.contourArea(contour)
     if(area > 2500):
         x, y, w, h = cv2.boundingRect(contour)
-        image = cv2.rectangle(image, (x,y), (x + w, y + h), (255,0,0), 2)
+        image = cv2.rectangle(image, (x,y), (x + w, y + h), (255,0,0), 1)
         cv2.putText(image, "Blue plasticpallet", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,255))
         bluePallets += 1
 
@@ -72,7 +72,7 @@ for pic, contour in enumerate(contours):
     area = cv2.contourArea(contour)
     if(area > 2500):
         x, y, w, h = cv2.boundingRect(contour)
-        image = cv2.rectangle(image, (x,y), (x + w, y + h), (0,255,0), 2)
+        image = cv2.rectangle(image, (x,y), (x + w, y + h), (0,255,0), 1)
         cv2.putText(image, "Green plasticpallet", (x, y), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0,0,255))
         greenPallets  += 1
 
